@@ -12,12 +12,12 @@ pipeline {
             }
         }
         
-        // stage('Docker container Delete') {
-        //     steps {
-        //         // Delete Docker container
-        //         sh 'docker rm -f jenkinsdocker-container'
-        //     }
-        // }
+        stage('Docker container Delete') {
+            steps {
+                // Delete Docker container
+                sh 'docker rm -f jenkinsdocker-container'
+            }
+        }
         
         stage('Docker Build') {
             steps {
