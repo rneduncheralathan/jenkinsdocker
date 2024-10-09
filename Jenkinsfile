@@ -15,7 +15,7 @@ pipeline {
         stage('Docker container Delete') {
             steps {
                 // Delete Docker container
-                sh 'docker rm -f jenkinsdocker-container'
+                docker rm -f jenkinsdocker-container
             }
         }
         
@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy Docker container
-                sh 'docker run -d -p 8090:80 --name jenkinsdocker-container jenkinsdocker'
+                docker run -d -p 8090:80 --name jenkinsdocker-container jenkinsdocker
             }
         }
         
