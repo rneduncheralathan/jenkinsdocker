@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy Docker container
-                sh 'docker run -d -p 8082:80 --name jenkinsdocker-container jenkinsdocker'
+                sh 'docker run -d -p 8090:80 --name jenkinsdocker-container jenkinsdocker'
             }
         }
         
